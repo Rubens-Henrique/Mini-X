@@ -19,10 +19,10 @@ REMETENTE_OBJ = $(BUILD_DIR)/remetente.o
 SERVIDOR_SRC = Servidor/main.c
 SERVIDOR_OBJ = $(BUILD_DIR)/servidor.o
 
-# Nomes dos executáveis
-LEITOR_EXEC = leitor
-REMETENTE_EXEC = remetente
-SERVIDOR_EXEC = servidor
+# Nomes dos executáveis (renomeados para evitar conflitos)
+LEITOR_EXEC = leitor_exec
+REMETENTE_EXEC = remetente_exec
+SERVIDOR_EXEC = servidor_exec
 
 # Alvo padrão (compilar tudo)
 all: $(LEITOR_EXEC) $(REMETENTE_EXEC) $(SERVIDOR_EXEC)
