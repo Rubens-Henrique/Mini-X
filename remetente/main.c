@@ -20,7 +20,7 @@ int menu(struct msg_t *msg)
     {
         return -1;
     }
-//Identificadores
+//Identificadores do destino , se não reconhecer retorna -1 e encerra conexão 
     fprintf(stdout, "Digite o ID de destino (0 - 999): ");
 
     if (fgets(entrada, 4, stdin) == NULL)
@@ -30,7 +30,7 @@ int menu(struct msg_t *msg)
     fprintf(stdout, "\n");
 
     int dest = atoi(entrada);
-
+// Pede a entrada da msg até 140 caracteres, caso tenha mais que isso, retorna -1
     fprintf(stdout, " Digite a mensagem :(máx 140 caracteres): ");
     text[0] = (char)getchar();
     if (fgets(text + 1, 139, stdin) == NULL)
@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
     {
         return -1;
     }
-
+//Confere  se a conexão foi feita 
     if (handshake(sockfd, id)<0) {
         fprintf(stderr, "\n ### ERRO: Falha NA comunicação \n");
         return -1;
