@@ -30,7 +30,10 @@ int menu(struct msg_t *msg)
     fprintf(stdout, "\n");
 
     int dest = atoi(entrada);
-// Pede a entrada da msg até 140 caracteres, caso tenha mais que isso, retorna -1
+
+   if (dest < 0 || dest > 999) {
+        return -1;
+    }
     fprintf(stdout, " Digite a mensagem :(máx 140 caracteres): ");
     text[0] = (char)getchar();
     if (fgets(text + 1, 139, stdin) == NULL)
