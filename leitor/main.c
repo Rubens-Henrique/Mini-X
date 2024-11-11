@@ -31,11 +31,11 @@ int main(int argc, char *argv[])
     // Realizar o "aperto de mão"
     ret = handshake(sockfd, id);
     if (ret < 0) {
-        fprintf(stderr, "\n ! ERRO: Falha no aperto de mão\n");
+        fprintf(stderr, "\n ! ERRO: Falha Conexão\n");
         return -1;
     }
     else {
-        fprintf(stdout, "===> Aperto de mão sucedido. \n");
+        fprintf(stdout, "===> Conexão bem sucedida . \n");
     }
 
     while (1) {
