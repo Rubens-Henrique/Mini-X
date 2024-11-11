@@ -34,4 +34,7 @@ extern int connect_server(int, int);
 extern int get_args(int, char **, int *, int *);
 
 extern int handshake(int, int);
+
+extern void HELPSERVER(char *program_name);
+
 #endif

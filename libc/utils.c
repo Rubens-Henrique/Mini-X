@@ -8,6 +8,24 @@
 #include <ctype.h>
 #include <utils.h>
 
+// Função para exibir uma mensagem de ajuda e finalizar o programa
+void HELPCLIENT(const char *prog_name) {
+    fprintf(stderr, "Uso: %s <porta> <id>\n", prog_name);
+    fprintf(stderr, "Exemplo: %s 12345 1\n", prog_name);
+    exit(1); // Encerra o programa com código de erro
+}
+
+void HELPSERVER(char *program_name)
+{
+    fprintf(stderr, "Uso incorreto. Uso esperado:\n");
+    fprintf(stderr, "  %s <porta> <id>\n", program_name);
+    fprintf(stderr, "\nOnde:\n");
+    fprintf(stderr, "  <porta>  : número da porta (entre 1024 e 65536)\n");
+    fprintf(stderr, "  <id>     : identificador do usuário (um número inteiro)\n");
+    fprintf(stderr, "\nExemplo de uso:\n");
+    fprintf(stderr, "  %s 12345 1\n", program_name);
+}
+
 int receber_mensagem(int sockfd, struct msg_t *msg)
 {
     size_t length = sizeof(*msg);
