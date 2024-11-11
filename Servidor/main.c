@@ -6,7 +6,7 @@
 #include <string.h>
 #include <signal.h>
 #include <time.h>
-#include <unistd.h> // Inclui a função close
+#include <unistd.h> 
 #include <utils.h>
 #include <sys/select.h>
 
