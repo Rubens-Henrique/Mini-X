@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
         {
             break;
         }
-        if (send_message(sockfd, msg) < 0){
+        if (enviar_mensagem(sockfd, msg) < 0){
             fprintf(stderr, "\n ### ERRO: Falha no envio da mensagem\n");
         }
     }
