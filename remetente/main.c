@@ -22,14 +22,14 @@ int menu(struct msg_t *msg)
     }
 //Identificadores do destino , se não reconhecer retorna -1 e encerra conexão 
     fprintf(stdout, "Digite o ID de destino (0 - 999): ");
-
+    int dest = atoi(entrada);
     if (fgets(entrada, 4, stdin) == NULL)
     {
         return -1;
     }
     fprintf(stdout, "\n");
 
-    int dest = atoi(entrada);
+
 
    if (dest < 0 || dest > 999) {
         return -1;
